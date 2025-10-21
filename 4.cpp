@@ -1,11 +1,12 @@
 #include<iostream>
 using namespace std;
-class Person{
+class Person{  // base class person 
     public:
         string name="srinath";
         int age=22;
 };
-class Employee:public Person{
+class Employee:public Person{  // // Derived class Employee inherits from Person
+
     public:
         string name="ALL";
         int age=25;
@@ -13,10 +14,12 @@ class Employee:public Person{
         cout<<"Age: "<<age<<endl;
     }
 };
-class Manager:public Employee{
+class Manager:public Employee{   // // Derived class Manager inherits from Employee
+
     public:
         int age=30;
-    void display(){
+    void display(){  //  Method to display career progression using different age and name values
+
         cout<<"Name: "<<Person::name<<endl;
         cout<<"At The "<<"Age of : "<<Person::age<<" A college finished student"<<endl;
         cout<<"\n At The "<<"Age of : "<<Employee::age<<" Employee At " <<Employee::name<<endl;
@@ -24,7 +27,8 @@ class Manager:public Employee{
     }
 };
 int main(){
-    Manager m;
+    Manager m; // create a object m 
     m.display();
     return 0;
+
 }
